@@ -65,3 +65,11 @@ model Product {
   orders      Order[]
   updatedAt   DateTime @updatedAt
 }
+
+model LoginDetail {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  ip        String?
+  updatedAt DateTime @updatedAt
+  userId    String
+}
